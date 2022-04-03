@@ -1,9 +1,13 @@
 package com.pauloalencar.helpdesk.repositories;
 
+import java.util.Optional;
+
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import com.pauloalencar.helpdesk.domain.Pessoa;
 
-public interface PessoaRepository extends JpaRepository<Pessoa, Integer>{
+public interface PessoaRepository extends JpaRepository<Pessoa, Integer> {
 
+	Optional<Pessoa> findByCpf(String cpf);
+	Optional<Pessoa> findByEmail(String email);
 }
