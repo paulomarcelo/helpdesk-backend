@@ -15,7 +15,7 @@ public class ChamadoDTO implements Serializable{
 	@JsonFormat(pattern = "dd/MM/yyyy")
 	private LocalDate dataAbertura = LocalDate.now();
 	@JsonFormat(pattern = "dd/MM/yyyy")
-	private LocalDate dataFechamaneto;
+	private LocalDate dataFechamento;
 	@NotNull(message = "O campo PRIORIDADE é requerido")
 	private Integer prioridade;
 	@NotNull(message = "O campo STATUS é requerido")
@@ -39,7 +39,7 @@ public class ChamadoDTO implements Serializable{
 		super();
 		this.id = obj.getId();
 		this.dataAbertura = obj.getDataAbertura();
-		this.dataFechamaneto = obj.getDataFechamaneto();
+		this.dataFechamento = obj.getDataFechamaneto();
 		this.prioridade = obj.getPrioridade().getCodigo();
 		this.status = obj.getStatus().getCodigo();
 		this.titulo = obj.getTitulo();
@@ -67,11 +67,11 @@ public class ChamadoDTO implements Serializable{
 	}
 
 	public LocalDate getDataFechamaneto() {
-		return dataFechamaneto;
+		return dataFechamento;
 	}
 
 	public void setDataFechamaneto(LocalDate dataFechamaneto) {
-		this.dataFechamaneto = dataFechamaneto;
+		this.dataFechamento = dataFechamaneto;
 	}
 
 	public Integer getPrioridade() {

@@ -27,7 +27,7 @@ public class Chamado implements Serializable{
 	private LocalDate dataAbertura = LocalDate.now();
 	
 	@JsonFormat(pattern = "dd/MM/yyyy")
-	private LocalDate dataFechamaneto;
+	private LocalDate dataFechamento;
 	
 	
 	private Prioridade prioridade;
@@ -76,11 +76,11 @@ public class Chamado implements Serializable{
 	}
 
 	public LocalDate getDataFechamaneto() {
-		return dataFechamaneto;
+		return dataFechamento;
 	}
 
 	public void setDataFechamaneto(LocalDate dataFechamaneto) {
-		this.dataFechamaneto = dataFechamaneto;
+		this.dataFechamento = dataFechamaneto;
 	}
 
 	public Prioridade getPrioridade() {
